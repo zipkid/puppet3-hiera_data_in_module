@@ -1,0 +1,12 @@
+
+# if using the git clones of puppet and facter you can use this script
+# to set the correct environment for using those to test
+# Just set ENVPUPPET_BASEDIR to the directory where you cloned them.
+
+export ENVPUPPET_BASEDIR=/home/puppet
+alias puppet="${ENVPUPPET_BASEDIR}/puppet/ext/envpuppet puppet"
+alias facter="${ENVPUPPET_BASEDIR}/puppet/ext/envpuppet facter"
+
+# This alias runs a puppet master in foreground, ideal for testing and debugging.
+alias pmd="${ENVPUPPET_BASEDIR}/puppet/ext/envpuppet puppet master --no-daemonize --debug --verbose"
+
